@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AttandanceTracke.Api/AttandanceTracke.Api.csproj" />
+  <Project Path="AttandanceTracker.Application/AttandanceTracker.Application.csproj" />
+  <Project Path="AttandanceTracker.Domain/AttandanceTracker.Domain.csproj" />
+  <Project Path="AttandanceTracker.Infrastructure/AttandanceTracker.Infrastructure.csproj" />
+</Solution>

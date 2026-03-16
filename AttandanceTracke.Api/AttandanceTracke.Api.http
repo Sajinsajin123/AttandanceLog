@@ -1,0 +1,6 @@
+@AttandanceTracke.Api_HostAddress = http://localhost:5152
+
+GET {{AttandanceTracke.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
