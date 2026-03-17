@@ -1245,6 +1245,29 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "AttandanceTracker.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "AttandanceTracker.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AttandanceTracker.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AttandanceTracker.Application.dll": {}
+        }
+      },
+      "AttandanceTracker.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/AttandanceTracker.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AttandanceTracker.Domain.dll": {}
+        }
       }
     }
   },
@@ -3649,11 +3672,24 @@
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "AttandanceTracker.Application/1.0.0": {
+      "type": "project",
+      "path": "../AttandanceTracker.Application/AttandanceTracker.Application.csproj",
+      "msbuildProject": "../AttandanceTracker.Application/AttandanceTracker.Application.csproj"
+    },
+    "AttandanceTracker.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AttandanceTracker.Domain/AttandanceTracker.Domain.csproj",
+      "msbuildProject": "../AttandanceTracker.Domain/AttandanceTracker.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AttandanceTracker.Application >= 1.0.0",
+      "AttandanceTracker.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 10.0.5",
+      "Microsoft.EntityFrameworkCore.Design >= 10.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.5"
     ]
@@ -3690,7 +3726,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\DELL\\source\\repos\\AttandanceTracke.Api\\AttandanceLog\\AttandanceTracker.Application\\AttandanceTracker.Application.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\AttandanceTracke.Api\\AttandanceLog\\AttandanceTracker.Application\\AttandanceTracker.Application.csproj"
+            },
+            "C:\\Users\\DELL\\source\\repos\\AttandanceTracke.Api\\AttandanceLog\\AttandanceTracker.Domain\\AttandanceTracker.Domain.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\AttandanceTracke.Api\\AttandanceLog\\AttandanceTracker.Domain\\AttandanceTracker.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -3710,6 +3753,12 @@
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[10.0.5, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.5, )"
           },

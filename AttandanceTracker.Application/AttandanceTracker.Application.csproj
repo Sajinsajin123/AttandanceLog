@@ -12,4 +12,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AttandanceTracker.Domain\AttandanceTracker.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

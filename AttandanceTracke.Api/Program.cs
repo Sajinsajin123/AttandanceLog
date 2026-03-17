@@ -1,4 +1,7 @@
 
+using AttandanceTracker.Infrastructure.DBContext;
+using Microsoft.EntityFrameworkCore;
+
 namespace AttandanceTracke.Api
 {
     public class Program
@@ -12,6 +15,8 @@ namespace AttandanceTracke.Api
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.AddDbContext<AttandanceTrackerDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
             var app = builder.Build();
 
