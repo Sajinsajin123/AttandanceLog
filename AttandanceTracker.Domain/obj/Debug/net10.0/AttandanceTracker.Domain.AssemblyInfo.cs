@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AttandanceTracker.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc2f96fd42d4b9efd3abc40107511ab6b44f0d53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8098b3a858ec77e1942c363bda5571ce21d89306")]
 [assembly: System.Reflection.AssemblyProductAttribute("AttandanceTracker.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AttandanceTracker.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

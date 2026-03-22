@@ -61,7 +61,6 @@ C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.A
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.AssemblyInfo.cs
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.sourcelink.json
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\rjimswa.dswa.cache.json
@@ -164,3 +163,8 @@ C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.A
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracke.Api\obj\Debug\net10.0\AttandanceTracke.Api.MvcApplicationPartsAssemblyInfo.cs

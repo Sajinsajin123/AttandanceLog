@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AttandanceTracker.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Intl : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -54,21 +54,33 @@ namespace AttandanceTracker.Infrastructure.Migrations
                 {
                     AttendanceID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserID = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Course = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RecordedBy = table.Column<int>(type: "int", nullable: false)
+                    RecordedBy = table.Column<int>(type: "int", nullable: false),
+                    UserId1 = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AttandanceCheck", x => x.AttendanceID);
                     table.ForeignKey(
-                        name: "FK_AttandanceCheck_AttandanceUser_UserID",
-                        column: x => x.UserID,
+                        name: "FK_AttandanceCheck_AttandanceUser_RecordedBy",
+                        column: x => x.RecordedBy,
                         principalTable: "AttandanceUser",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_AttandanceCheck_AttandanceUser_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AttandanceUser",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_AttandanceCheck_AttandanceUser_UserId1",
+                        column: x => x.UserId1,
+                        principalTable: "AttandanceUser",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -77,7 +89,7 @@ namespace AttandanceTracker.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserID = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DOB = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -90,22 +102,32 @@ namespace AttandanceTracker.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_AttandanceDetailsDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AttandanceDetailsDetails_AttandanceUser_UserID",
-                        column: x => x.UserID,
+                        name: "FK_AttandanceDetailsDetails_AttandanceUser_UserId",
+                        column: x => x.UserId,
                         principalTable: "AttandanceUser",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AttandanceCheck_UserID",
+                name: "IX_AttandanceCheck_RecordedBy",
                 table: "AttandanceCheck",
-                column: "UserID");
+                column: "RecordedBy");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AttandanceDetailsDetails_UserID",
+                name: "IX_AttandanceCheck_UserId",
+                table: "AttandanceCheck",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AttandanceCheck_UserId1",
+                table: "AttandanceCheck",
+                column: "UserId1");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AttandanceDetailsDetails_UserId",
                 table: "AttandanceDetailsDetails",
-                column: "UserID",
+                column: "UserId",
                 unique: true);
 
             migrationBuilder.CreateIndex(

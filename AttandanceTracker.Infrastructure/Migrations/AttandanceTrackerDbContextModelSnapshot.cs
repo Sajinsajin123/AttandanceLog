@@ -44,12 +44,19 @@ namespace AttandanceTracker.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserID")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId1")
                         .HasColumnType("int");
 
                     b.HasKey("AttendanceID");
 
-                    b.HasIndex("UserID");
+                    b.HasIndex("RecordedBy");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("AttandanceCheck");
                 });
@@ -139,7 +146,7 @@ namespace AttandanceTracker.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserID")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.Property<int>("Year")
@@ -147,7 +154,7 @@ namespace AttandanceTracker.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserID")
+                    b.HasIndex("UserId")
                         .IsUnique();
 
                     b.ToTable("AttandanceDetailsDetails");
@@ -155,11 +162,23 @@ namespace AttandanceTracker.Infrastructure.Migrations
 
             modelBuilder.Entity("AttandanceTracker.Domain.Entities.Attendance", b =>
                 {
-                    b.HasOne("AttandanceTracker.Domain.Entities.User", "User")
-                        .WithMany("Attendances")
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("AttandanceTracker.Domain.Entities.User", "RecordedUser")
+                        .WithMany()
+                        .HasForeignKey("RecordedBy")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("AttandanceTracker.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AttandanceTracker.Domain.Entities.User", null)
+                        .WithMany("Attendances")
+                        .HasForeignKey("UserId1");
+
+                    b.Navigation("RecordedUser");
 
                     b.Navigation("User");
                 });
@@ -179,7 +198,7 @@ namespace AttandanceTracker.Infrastructure.Migrations
                 {
                     b.HasOne("AttandanceTracker.Domain.Entities.User", "User")
                         .WithOne("UserDetails")
-                        .HasForeignKey("AttandanceTracker.Domain.Entities.UserDetails", "UserID")
+                        .HasForeignKey("AttandanceTracker.Domain.Entities.UserDetails", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

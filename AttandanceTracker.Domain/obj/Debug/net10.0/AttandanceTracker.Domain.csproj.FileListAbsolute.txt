@@ -10,3 +10,4 @@ C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracker.
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracker.Domain\obj\Debug\net10.0\refint\AttandanceTracker.Domain.dll
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracker.Domain\obj\Debug\net10.0\AttandanceTracker.Domain.pdb
 C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracker.Domain\obj\Debug\net10.0\ref\AttandanceTracker.Domain.dll
+C:\Users\DELL\source\repos\AttandanceTracke.Api\AttandanceLog\AttandanceTracker.Domain\obj\Debug\net10.0\AttandanceTracker.Domain.csproj.AssemblyReference.cache

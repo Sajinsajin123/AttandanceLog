@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="RepoInterface\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
   </ItemGroup>
 
 </Project>
