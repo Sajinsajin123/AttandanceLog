@@ -13,6 +13,7 @@ namespace AttandanceTracker.Infrastructure.DBContext
         public DbSet<User> AttandanceUser { get; set; }
         public DbSet<Attendance> AttandanceCheck {  get; set; }
         public DbSet<UserDetails> AttandanceDetailsDetails { get;set; }
+        public DbSet<Login>LoginTable { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

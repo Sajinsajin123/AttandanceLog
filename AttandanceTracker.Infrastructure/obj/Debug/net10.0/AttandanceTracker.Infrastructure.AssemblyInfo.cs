@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AttandanceTracker.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8098b3a858ec77e1942c363bda5571ce21d89306")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b94f56641ea8692712bc3a71b6e55a4d584ef88")]
 [assembly: System.Reflection.AssemblyProductAttribute("AttandanceTracker.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AttandanceTracker.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,8 +8,14 @@ namespace AttandanceTracker.Domain.RepoInterface
 {
     public interface IAttandanceRepository
     {
-        Task<int> AddAsync(Attandance attandance);
-        Task<List<Attandance>> GetAllAsync();
-        Task<Attandance> GetByIdAsync(int id);
+        Task<int> AddAttandanceAsync(Attendance attandance);
+        Task<List<Attendance>> GetAllAttandanceAsync();
+        Task<Attendance> GetByIdAsync(int id);
+        Task<int> UpdateAttandance(Attendance attandance);
+        Task<int> DeleteAttandance(int id);
+
     }
 }
+
+           
+   

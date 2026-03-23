@@ -12,6 +12,7 @@ namespace AttandanceTracker.Application.Mapper
         public ExpenseProfile() 
         {
             CreateMap<RoleDto, Role>().ReverseMap();
+            CreateMap<AttandanceDto, Attendance>().ReverseMap();
         }
     }
 }

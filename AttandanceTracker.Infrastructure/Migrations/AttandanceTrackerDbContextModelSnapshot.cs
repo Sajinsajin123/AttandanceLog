@@ -61,6 +61,24 @@ namespace AttandanceTracker.Infrastructure.Migrations
                     b.ToTable("AttandanceCheck");
                 });
 
+            modelBuilder.Entity("AttandanceTracker.Domain.Entities.Login", b =>
+                {
+                    b.Property<string>("EmailID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("EmailID");
+
+                    b.ToTable("LoginTable");
+                });
+
             modelBuilder.Entity("AttandanceTracker.Domain.Entities.Role", b =>
                 {
                     b.Property<int>("RoleID")
